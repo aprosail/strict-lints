@@ -1,0 +1,24 @@
+name: review
+
+on:
+  push: { branches: ["main", "dev"] }
+  pull_request: { branches: ["main", "dev"] }
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dart-lang/setup-dart@v1
+
+      - name: add dependencies
+        run: dart pub get
+
+      - name: format
+        run: dart format --output=none --set-exit-if-changed .
+
+      - name: analyze
+        run: dart analyze --fatal-infos
+
+      - name: test
+        run: dart test
