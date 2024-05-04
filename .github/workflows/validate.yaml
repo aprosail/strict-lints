@@ -1,28 +1,25 @@
 # yaml-language-server:$schema=https://json.schemastore.org/github-workflow.json
-name: validation
+name: validate
 
 on:
-  push:
-    branches: ["main", "dev"]
-  pull_request:
-    branches: ["main", "dev"]
+  push: { branches: ["main", "dev"] }
+  pull_request: { branches: ["main", "dev"] }
 
 jobs:
-  build:
+  validate:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - uses: dart-lang/setup-dart@v1
 
-      - name: Install dependencies
+      - name: add dependencies
         run: dart pub get
 
-      - name: Verify formatting
+      - name: format
         run: dart format --output=none --set-exit-if-changed .
 
-      - name: Analyze project source
+      - name: analyze
         run: dart analyze --fatal-infos
 
-      - name: Run tests
+      - name: test
         run: dart test
