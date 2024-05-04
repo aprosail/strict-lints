@@ -1,12 +1,12 @@
 # yaml-language-server:$schema=https://json.schemastore.org/github-workflow.json
-name: validate
+name: review
 
 on:
   push: { branches: ["main", "dev"] }
   pull_request: { branches: ["main", "dev"] }
 
 jobs:
-  validate:
+  review:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
