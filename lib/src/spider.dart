@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:html/dom.dart';
 import 'package:html/parser.dart' as html;
 import 'package:http/http.dart' as http;
+import 'package:syntax_sugar/syntax_sugar.dart';
 
 /// Link to the website of the source API docs.
 const site = 'https://dart.dev/tools/linter-rules';
@@ -94,6 +95,20 @@ class RuleStatus {
   final bool removed;
   final bool unreleased;
   final bool experimental;
+
+  bool get isEmpty => !isNotEmpty;
+
+  bool get isNotEmpty => satisfyAny({
+        styleCore,
+        styleFlutter,
+        styleRecommended,
+        hasFix,
+        removed,
+        unreleased,
+        experimental,
+      });
+
+  bool get hasReuse => satisfyAny({styleCore, styleRecommended, styleFlutter});
 
   String get format => [
         if (hasFix) 'has-fix',
