@@ -2,7 +2,7 @@ name: strict_lints
 description: >
   A strict linter config that enable as much rules as possible,
   and the infrastructure to sync from official api site.
-version: 0.0.0
+version: 0.1.0
 repository: https://github.com/aprosail/strict-lints
 topics:
   - lint
