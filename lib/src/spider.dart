@@ -22,6 +22,7 @@ Future<Rules> spider({String site = site, bool showDetails = false}) async {
     try {
       handler[parseRuleName(element)] = RuleStatus.parse(element);
     } on InvalidDomStructure catch (e) {
+      // ignore: avoid_print
       if (showDetails) print(e);
     }
   }

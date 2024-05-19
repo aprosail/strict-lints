@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:strict_lints/strict_lints.dart';
 import 'package:terminal_decorate/terminal_decorate.dart';
 
