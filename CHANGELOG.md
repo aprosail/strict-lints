@@ -1,3 +1,8 @@
+## 0.1.0
+
+- Basic lint options, setup manually.
+- Also apply those lint options to this repo itself.
+
 ## 0.0.0
 
 - Initial version as placeholder.

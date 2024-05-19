@@ -2,7 +2,7 @@ name: strict_lints
 description: >
   A strict linter config that enable as much rules as possible,
   and the infrastructure to sync from official api site.
-version: 0.0.0
+version: 0.1.0
 repository: https://github.com/aprosail/strict-lints
 topics:
   - lint
@@ -14,6 +14,7 @@ topics:
 environment: {sdk: ^3.3.4}
 
 dependencies:
+  flutter_lints: ^4.0.0
   html: ^0.15.4
   http: ^1.2.1
   path: ^1.8.0
@@ -21,5 +22,4 @@ dependencies:
   terminal_decorate: ^0.1.0
 
 dev_dependencies:
-  lints: ^3.0.0
   test: ^1.24.0
