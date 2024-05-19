@@ -1,3 +1,7 @@
+## 0.1.1
+
+- Disable require message in asserts.
+
 ## 0.1.0
 
 - Basic lint options, setup manually.
