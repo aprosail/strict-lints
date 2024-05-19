@@ -87,7 +87,7 @@ linter:
     package_prefixed_library_names: true
     parameter_assignments: true
     prefer_asserts_in_initializer_lists: true
-    prefer_asserts_with_message: true
+    prefer_asserts_with_message: false # might make code complex
     prefer_constructors_over_static_methods: true
     prefer_double_quotes: false # conflict: prefer_single_quotes
     prefer_expression_function_bodies: true
